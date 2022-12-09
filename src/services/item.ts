@@ -1,27 +1,27 @@
 import { News } from "../interfaces/news.interface";
-import ItemModel from "../models/item";
+import NewsModel from "../models/news_Schema";
 
 const insertNews = async (item: News) => {
-    const responseInsert = await ItemModel.create(item);
+    const responseInsert = await NewsModel.create(item);
     return responseInsert;
 
 };
 
 const getNews = async () => {
-    const responseItem = await ItemModel.find({})
+    const responseItem = await NewsModel.find({})
     return responseItem;
 
 };
 
 const getNewsById = async (id: string) => {
-    const responseItem = await ItemModel.findOne({ _id: id })
+    const responseItem = await NewsModel.findOne({ _id: id })
     return responseItem;
 
 };
 
 const updateNews = async (id: string, data: News) => {
 
-    const responseItem = await ItemModel.findOneAndUpdate(
+    const responseItem = await NewsModel.findOneAndUpdate(
         { _id: id },
         data,
         {
@@ -33,7 +33,7 @@ const updateNews = async (id: string, data: News) => {
 
  const deleteNews = async (id: string) => {
 
-    const responseItem = await ItemModel.remove({ _id: id })
+    const responseItem = await NewsModel.deleteOne({ _id: id })
     return responseItem;
 
  };

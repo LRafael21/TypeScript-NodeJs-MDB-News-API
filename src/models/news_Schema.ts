@@ -2,7 +2,7 @@ import { Schema, Types, model, Model } from "mongoose"
 import { News } from "../interfaces/news.interface"
 
 
-const ItemSchema = new Schema<News>(
+const NewsSchema = new Schema<News>(
     {
         autor: {
             type: String,
@@ -55,5 +55,5 @@ const ItemSchema = new Schema<News>(
 
 );
 
-const ItemModel = model('news', ItemSchema)
-export default ItemModel;
+const NewsModel = model('news', NewsSchema)
+export default NewsModel;
