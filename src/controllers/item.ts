@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { getNews, insertNews, getNewsById, updateNews, deleteNews } from "../../services/item";
+import { getNews, insertNews, getNewsById, updateNews, deleteNews } from "../services/item";
 import { handleHTttp } from "../utils/error.handle"
 
 

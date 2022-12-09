@@ -1,5 +1,5 @@
-import { News } from "../src/interfaces/news.interface";
-import ItemModel from "../src/models/item";
+import { News } from "../interfaces/news.interface";
+import ItemModel from "../models/item";
 
 const insertNews = async (item: News) => {
     const responseInsert = await ItemModel.create(item);

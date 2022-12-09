@@ -10,8 +10,4 @@ export interface News {
     country: string;
     published_at: Date;
 
-
-
-
-
 }
